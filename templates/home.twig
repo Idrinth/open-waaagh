@@ -1,0 +1,9 @@
+{% include 'header.twig' %}
+{% for post in posts %}
+    <div class="post">
+        <h2><a href="/{{ post.slug }}">{{ post.post_title }}</a></h2>
+        <p>Erstellt {{ post.post_date_gmt }} von {{ post.author }}</p>
+        <p>{{ post.post_excerpt }}</p>
+    </div>
+{% endfor %}
+{% include 'footer.twig' %}

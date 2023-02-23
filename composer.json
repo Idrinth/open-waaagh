@@ -1,0 +1,16 @@
+{
+    "name": "idrinth/open-waaagh",
+    "description": "Read-Only access to waaagh.de.",
+    "authors": [
+        {
+            "name": "Björn",
+            "homepage": "https://github.com/idrinth"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "twig/twig": "*",
+        "vlucas/phpdotenv": "*",
+        "nikic/fast-route": "*"
+    }
+}
