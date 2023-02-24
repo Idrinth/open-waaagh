@@ -22,7 +22,7 @@ LEFT JOIN wa_users ON wa_users.ID=wa_posts.post_author
 WHERE wa_posts.post_status='publish'
 AND wa_posts.post_type='post'
 AND wa_posts.post_name=:slug");
-        $stmt->execute([':slug' => $slug]);
+        $stmt->execute([':slug' => $slug]);        var_dump($slug);        var_dump($this->database->errorInfo());
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$data) {
             header('Location: /', true, 303);
