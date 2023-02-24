@@ -12,5 +12,10 @@
         "twig/twig": "*",
         "vlucas/phpdotenv": "*",
         "nikic/fast-route": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "De\\Idrinth\\WAAAGHde\\": "src"
+        }
     }
 }
