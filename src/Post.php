@@ -33,6 +33,6 @@ FROM wa_comments
 WHERE wa_comments.comment_post_ID=:id
 AND comment_approved=1');
         $stmt->execute([':id' => $data['ID']]);
-        return $this->twig->render('home', ['post' => $data, 'comments' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
+        return $this->twig->render('post', ['post' => $data, 'comments' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
     }
 }
