@@ -26,7 +26,7 @@ AND wa_posts.post_name=:slug");
         $data = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$data) {
             header('Location: /', true, 303);
-            return;
+            return '';
         }
         $stmt = $this->database->prepare('SELECT comment_author,comment_author_url,comment_date_gmt,comment_content
 FROM wa_comments
