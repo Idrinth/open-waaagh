@@ -2,11 +2,11 @@
 <h1>{{ post.post_title }}</h1>
 <p>Erstellt {{ post.post_date_gmt }} von {{ post.author }}</p>
 <div class="post-content">
-    {{ post.post_content | raw }}
+    {{ post.post_content | nl2br | raw }}
 </div>
 {% for comment in comments %}
     <div class="comment">
-        <p>{{ comment.content | raw }}</p>
+        <p>{{ comment.comment_content | raw }}</p>
         <p>Erstellt {{ comment.comment_date_gmt }} von <a target="_blank" href="{{ comment.comment_author_url }}">{{ comment.comment_author }}</a></p>
     </div>
 {% endfor %}
