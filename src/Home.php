@@ -22,6 +22,6 @@ LEFT JOIN wa_users ON wa_users.ID=wa_posts.post_author
 WHERE wa_posts.post_status='publish'
 AND wa_posts.post_type='post'
 ORDER BY wa_posts.post_date_gmt DESC");
-        return $this->twig->render('home', ['posts' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
+        return $this->twig->render('home', ['title' => 'Home', 'posts' => $stmt->fetchAll(PDO::FETCH_ASSOC)]);
     }
 }
