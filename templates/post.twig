@@ -2,7 +2,7 @@
 <h1>{{ post.post_title }}</h1>
 <p>Erstellt {{ post.post_date_gmt }} von {{ post.author }}</p>
 <div class="post-content">
-    {{ post.post_content | nl2br | raw }}
+    {{ post.post_content | raw }}
 </div>
 {% for comment in comments %}
     <div class="comment">
